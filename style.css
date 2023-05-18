@@ -76,7 +76,7 @@ body {
 
     opacity: 0.1;
 
-    background-image: url("./background/tv.png");
+    background-image: url("./src/images/tv.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,48 +101,43 @@ body {
     background-size: cover;
 
     filter: brightness(0.8) contrast(0.9) saturate(0.3);
+
+    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer1 {
-    background-image: url("./background/c1.png");
+    background-image: url("./src/images/c1.svg");
     z-index: 7;
-    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer2 {
-    background-image: url("./background/c2.png");
+    background-image: url("./src/images/c2.svg");
     z-index: 6;
-    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer3 {
-    background-image: url("./background/c3.png");
+    background-image: url("./src/images/c3.svg");
     z-index: 5;
-    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer4 {
-    background-image: url("./background/c4.png");
+    background-image: url("./src/images/c4.svg");
     z-index: 4;
-    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer5 {
-    background-image: url("./background/c5.png");
+    background-image: url("./src/images/c5.svg");
     z-index: 3;
-    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer6 {
-    background-image: url("./background/c6.png");
+    background-image: url("./src/images/c6.svg");
     z-index: 2;
-    transition: 1s all ease-in-out;
 }
 
 .wallpaper__layer7 {
-    background-image: url("./background/c7.png");
+    background-image: url("./src/images/c7.jpg");
     z-index: 1;
-    transition: 1.2s all ease-in-out;
 }
 
 .text__container {

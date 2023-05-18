@@ -32,7 +32,7 @@ glitch.style.setProperty('--glitch-after-left', '15px');
 let timerDone = 0
 
 function timer(time) {
-    console.log('Ejecutando con delay de:', time)
+    // console.log('Ejecutando con delay de:', time)
     let afterOffset = Math.floor(Math.random() * 15)
     let beforeOffset = Math.floor((Math.random() * 10) + 20)
 
@@ -76,7 +76,7 @@ function timer(time) {
     }, 650);
 
     setTimeout(() => {
-        console.log('LISTO!')
+        // console.log('LISTO!')
         timerDone = 1
     }, time);
 }
@@ -93,3 +93,17 @@ setInterval(() => {
         }
     }, initialTimeout)
 }, 1000);
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     alert('ok')
+// });
+
+// window.onload = function exampleFunction() {
+//     alert("Yahoo!");
+// }
+
+// document.onreadystatechange = function () {
+//     if (document.readyState == "complete") {
+//       alert("Yahoo!");
+//     }
+//   };
