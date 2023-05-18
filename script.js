@@ -25,60 +25,39 @@ clickableBox.addEventListener('click', () => {
     layer7.style.setProperty('transform', 'scale(1.7)')  
 })
 
-const glitch = document.getElementById("glitch");
-glitch.style.setProperty('--glitch-before-left', '15px');
-glitch.style.setProperty('--glitch-after-left', '15px');
+const glitchTrigger = ({ element, beforeOffset, afterOffset, opacity, content }) => {
+    beforeOffset = beforeOffset || Math.floor((Math.random() * 10) + 20)
+    afterOffset = afterOffset || Math.floor(Math.random() * 15)
+
+    const targetElement = document.getElementById(element)
+
+    targetElement.setAttribute('glitchContent', content || targetElement.innerText)
+    targetElement.style.setProperty('opacity', opacity)
+    targetElement.style.setProperty('--glitch-after-left', afterOffset + 'px')
+    targetElement.style.setProperty('--glitch-before-left', beforeOffset + 'px')
+} 
+
+const glitch = document.getElementById("glitch")
+const paragraph = document.getElementById("paragraph")
 
 let timerDone = 0
 
 function timer(time) {
-    // console.log('Ejecutando con delay de:', time)
-    let afterOffset = Math.floor(Math.random() * 15)
-    let beforeOffset = Math.floor((Math.random() * 10) + 20)
+    glitchTrigger({ element: 'glitch', opacity: 0.8 })
+    setTimeout(() => glitchTrigger({ element: 'glitch', opacity: 0.4 }), 100)
+    setTimeout(() => glitchTrigger({ element: 'glitch', opacity: 0.8 }), 150)
+    setTimeout(() => glitchTrigger({ element: 'glitch', opacity: 1 }), 200)
+    setTimeout(() => glitchTrigger({ element: 'glitch', opacity: 0.4 }), 650)
+    setTimeout(() => glitchTrigger({ element: 'glitch', beforeOffset: 15, afterOffset: 15, opacity: 0.8 }), 850)
 
-    glitch.style.setProperty('--glitch-before-left', beforeOffset + 'px');
-    glitch.style.setProperty('--glitch-after-left', afterOffset + 'px');
-    glitch.style.setProperty('opacity', '0.8');
+    glitchTrigger({ element: 'paragraph', opacity: 0.8, content: ' ' })
+    setTimeout(() => glitchTrigger({ element: 'paragraph', opacity: 0.4, content: ' ' }), 100)
+    setTimeout(() => glitchTrigger({ element: 'paragraph', opacity: 0.8, content: ' ' }), 150)
+    setTimeout(() => glitchTrigger({ element: 'paragraph', opacity: 1, content: ' ' }), 200)
+    setTimeout(() => glitchTrigger({ element: 'paragraph', opacity: 0.4, content: ' '  }), 650)
+    setTimeout(() => glitchTrigger({ element: 'paragraph', beforeOffset: 342, afterOffset: 342, opacity: 0.8, content: ' '  }), 850)
 
-    setTimeout(() => {
-        let afterOffset = Math.floor(Math.random() * 15)
-        let beforeOffset = Math.floor((Math.random() * 10) + 20)
-    
-        glitch.style.setProperty('opacity', '0.4');
-        glitch.style.setProperty('left', '15px');
-        glitch.style.setProperty('--glitch-before-left', beforeOffset + 'px');
-        glitch.style.setProperty('--glitch-after-left', afterOffset + 'px');
-    }, 100);
-
-    setTimeout(() => {
-        let afterOffset = Math.floor(Math.random() * 15)
-        let beforeOffset = Math.floor((Math.random() * 10) + 20)
-    
-        glitch.style.setProperty('--glitch-before-left', beforeOffset + 'px');
-        glitch.style.setProperty('--glitch-after-left', afterOffset + 'px');
-        glitch.style.setProperty('opacity', '0.8');
-    }, 150);
-
-    setTimeout(() => {
-        let afterOffset = Math.floor(Math.random() * 15)
-        let beforeOffset = Math.floor((Math.random() * 10) + 20)
-
-        glitch.style.setProperty('opacity', '1');
-        glitch.style.setProperty('--glitch-before-left', beforeOffset + 'px');
-        glitch.style.setProperty('--glitch-after-left', afterOffset + 'px');
-
-    }, 200);
-
-    setTimeout(() => {
-        glitch.style.setProperty('--glitch-before-left', '15px');
-        glitch.style.setProperty('--glitch-after-left', '15px');
-        glitch.style.setProperty('opacity', '0.8');
-    }, 650);
-
-    setTimeout(() => {
-        // console.log('LISTO!')
-        timerDone = 1
-    }, time);
+    setTimeout(() =>  timerDone = 1, time);
 }
 
 timer(1000)
@@ -93,17 +72,3 @@ setInterval(() => {
         }
     }, initialTimeout)
 }, 1000);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     alert('ok')
-// });
-
-// window.onload = function exampleFunction() {
-//     alert("Yahoo!");
-// }
-
-// document.onreadystatechange = function () {
-//     if (document.readyState == "complete") {
-//       alert("Yahoo!");
-//     }
-//   };
