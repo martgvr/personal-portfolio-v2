@@ -64,7 +64,8 @@ body {
     z-index: 9;
 
     opacity: 0.25;
-    background: linear-gradient(180deg, #0071db, #201b20);
+    filter: contrast(1.6);
+    background: linear-gradient(180deg, #6fa6dd, #201b20);
 }
 
 .tvlines {
@@ -74,7 +75,7 @@ body {
     position: absolute;
     z-index: 7;
 
-    opacity: 0.1;
+    opacity: 0.15;
 
     background-image: url("./src/images/tv.png");
     background-position: center center;
@@ -105,41 +106,6 @@ body {
     transition: 1s all ease-in-out;
 }
 
-.wallpaper__layer1 {
-    background-image: url("./src/images/c1.svg");
-    z-index: 7;
-}
-
-.wallpaper__layer2 {
-    background-image: url("./src/images/c2.svg");
-    z-index: 6;
-}
-
-.wallpaper__layer3 {
-    background-image: url("./src/images/c3.svg");
-    z-index: 5;
-}
-
-.wallpaper__layer4 {
-    background-image: url("./src/images/c4.svg");
-    z-index: 4;
-}
-
-.wallpaper__layer5 {
-    background-image: url("./src/images/c5.svg");
-    z-index: 3;
-}
-
-.wallpaper__layer6 {
-    background-image: url("./src/images/c6.svg");
-    z-index: 2;
-}
-
-.wallpaper__layer7 {
-    background-image: url("./src/images/c7.jpg");
-    z-index: 1;
-}
-
 .text__container {
     z-index: 6;
     position: relative;
@@ -147,6 +113,7 @@ body {
 
     justify-content: center;
     align-items: center;
+    transition: 1s all ease-in-out;
 }
 
 h1 {
@@ -193,4 +160,9 @@ p {
 
 .clickable__box:hover {
     cursor: pointer;
+}
+
+@keyframes fadeout {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
