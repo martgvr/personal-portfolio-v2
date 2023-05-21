@@ -203,8 +203,10 @@ main {
 }
 
 .explorer {
+    opacity: 0.9;
     height: 100%;
     background-color: #171921;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .explorer__title {
@@ -245,6 +247,107 @@ main {
 
 .rightside {
     width: 100%;
+}
+
+.terminal {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+    font-size: 1.4em;
+    gap: 2px;
+}
+
+.terminal__command {
+    gap: 10px;
+    align-items: center;
+}
+
+.terminal__command img {
+    width: 13px;
+    height: 11px;
+}
+
+.terminal__command--arrows > p:nth-child(1) {
+    color: #a04336;
+}
+
+.terminal__command--arrows > p:nth-child(2) {
+    color: #80a265;
+}
+
+.terminal__command--arrows > p:nth-child(3) {
+    color: #eab675;
+}
+
+.terminal__command > p:nth-child(3) {
+    color: #83c0bd;
+}
+
+.terminal__techstack {
+    margin: 10px 0px;
+    width: 100%;
+    gap: 10px;
+}
+
+.terminal__techstack--tech {
+    background-image: url('./src/images/hexagon1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 120px;
+    width: 140px;
+    opacity: 0.8;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal__techstack--tech > div {
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal__techstack--tech > div p {
+    color: rgb(163, 163, 163);
+    font-weight: 600;
+    font-size: 0.8em;
+    margin-bottom: -8px;
+}
+
+.terminal__techstack--tech img {
+    width: 60px;
+}
+
+.terminal__projects {
+    margin: 10px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.terminal__projects--box {
+    width: 400px;
+    background-color: rgba(10, 10, 10, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+}
+
+.terminal__projects--box h2 {
+    font-size: 2.4em;
+    color: #d61e55;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.terminal__projects--box h3 {
+    font-size: 1.1em;
+}
+
+.terminal__projects--box p {
+    font-size: 0.9em;
 }
 
 @keyframes fadeout {
