@@ -1,26 +1,36 @@
 // SVG ASSIGNMENT
 for (let i = 1; i <= 7; i++) {
-    const element = document.getElementById(`layer${i}`)
+    const element = document.getElementById(`wallpaperLayer${i}`)
     element.style.backgroundImage = i === 7 ? `url("./src/images/c${i}.jpg")` : `url("./src/images/c${i}.svg")`
+    element.style.filter = "brightness(0.8) contrast(0.9) saturate(0.2)"
     element.style.zIndex = 8 - i
 }
 
 // PARALLAX EVENT
 const clickableBox = document.getElementById('clickableBox')
 
-clickableBox.addEventListener('click', () => {
+// clickableBox.addEventListener('click', () => {
     // ZOOM EFFECT
     for (let i = 1; i <= 7; i++) {
-        let element = document.getElementById(`layer${i}`)
+        let element = document.getElementById(`wallpaperLayer${i}`)
         element.style.setProperty('transform', `scale(1.${i})`)
         i !== 7 && element.style.setProperty('top', '70px')
     }
 
     // FADE OUT
     element = document.getElementById('textCotainer')
+    document.getElementById('clickableBox').remove()
     element.style.setProperty('transform', `scale(2)`)
     element.style.animation = 'fadeout 0.7s forwards 0.2s'
-})
+
+    const contentContainer = document.getElementById('contentContainer')
+
+    // CONTENT BOXES
+    setTimeout(() => {
+        element.remove()
+        contentContainer.style.display = "flex"
+    }, 1000)
+// })
 
 // GLITCH EFFECT
 const glitchTrigger = ({ element, beforeOffset, afterOffset, opacity, content }) => {

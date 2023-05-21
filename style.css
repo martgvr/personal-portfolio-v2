@@ -1,7 +1,10 @@
 /* IMPORTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 /* RESET */
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -9,6 +12,7 @@
 }
 
 /* GLOBALS */
+
 html {
     background-color: rgb(20, 20, 20);
     color: rgb(220, 220, 220);
@@ -35,6 +39,7 @@ body {
 }
 
 /* HELPERS */
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -51,31 +56,28 @@ body {
     margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-}
-
 /* STYLES */
-.gradient {
+
+.wallpaper__gradient {
     top: 0;
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 9;
 
-    opacity: 0.25;
-    filter: contrast(1.6);
-    background: linear-gradient(180deg, #6fa6dd, #201b20);
+    opacity: 0.2;
+    filter: contrast(1.8);
+    background: linear-gradient(180deg, #2a86e2, #201b20);
 }
 
-.tvlines {
+.wallpaper__tvline {
     top: 0;
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 7;
 
-    opacity: 0.15;
+    opacity: 0.1;
 
     background-image: url("./src/images/tv.png");
     background-position: center center;
@@ -101,10 +103,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    filter: brightness(0.8) contrast(0.9) saturate(0.3);
-
-    transition: 1s all ease-in-out;
+    /* transition: 1s all ease-in-out; */
 }
+
+/* WELCOME TEXT CONTAINER */
 
 .text__container {
     z-index: 6;
@@ -113,23 +115,25 @@ body {
 
     justify-content: center;
     align-items: center;
-    transition: 1s all ease-in-out;
+    /* transition: 1s all ease-in-out; */
 }
 
-h1 {
+.text__container h1 {
     font-size: 12em;
     z-index: 6;
     text-align: center;
     letter-spacing: 5px;
 }
 
-p {
+.text__container p {
     letter-spacing: 10px;
     text-align: center;
     text-transform: uppercase;
     font-size: 2em;
     width: fit-content;
 }
+
+/* GLITCH EFFECT */
 
 .glitch::before, .glitch::after {
     content: attr(glitchContent);
@@ -160,6 +164,87 @@ p {
 
 .clickable__box:hover {
     cursor: pointer;
+}
+
+/* CONTENT CONTAINER */
+
+.content__container {
+    display: none;
+    z-index: 12;
+
+    width: 100%;
+    height: 100%;
+}
+
+header { 
+    height: 50px;
+    padding: 0 20px;
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: 0 20px;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+/* LEFT SIDE */
+
+.leftside {
+    width: 35%;
+}
+
+.explorer {
+    height: 100%;
+    background-color: #171921;
+}
+
+.explorer__title {
+    height: 34px;
+    padding: 0 18px 0 10px;
+    border-bottom: 1px solid #0a0b0f;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.explorer__title--leftside img {
+    width: 16px;
+    height: 16px;
+} 
+
+.explorer__title--leftside img:last-of-type {
+    width: 22px;
+    height: 17px;
+    filter: contrast(0) brightness(2);
+} 
+
+.explorer__title--rightside {
+    gap: 36px;
+}
+
+.explorer__title--rightside img {
+    width: 10px;
+    height: 10px;
+    filter: brightness(1.4);
+}
+
+.explorer__title--leftside {
+    gap: 20px;
+}
+
+/* RIGHT SIDE */
+
+.rightside {
+    width: 100%;
 }
 
 @keyframes fadeout {

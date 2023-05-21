@@ -4,33 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Martin Guevara | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/src/images/favicon.png" type="image/x-icon">
     <script src="script.js" defer></script>
 </head>
 
 <body class="flex-column">
+    <section class="wallpaper">
+        <div class="wallpaper__tvline"></div>
+        <div class="wallpaper__gradient"></div>
 
-    <div class="wallpaper">
-        <div class="wallpaper__layer1" id="layer1"></div>
-        <div class="wallpaper__layer2" id="layer2"></div>
-        <div class="wallpaper__layer3" id="layer3"></div>
-        <div class="wallpaper__layer4" id="layer4"></div>
-        <div class="wallpaper__layer5" id="layer5"></div>
-        <div class="wallpaper__layer6" id="layer6"></div>
-        <div class="wallpaper__layer7" id="layer7"></div>
-    </div>
+        <div class="wallpaper__layer1" id="wallpaperLayer1"></div>
+        <div class="wallpaper__layer2" id="wallpaperLayer2"></div>
+        <div class="wallpaper__layer3" id="wallpaperLayer3"></div>
+        <div class="wallpaper__layer4" id="wallpaperLayer4"></div>
+        <div class="wallpaper__layer5" id="wallpaperLayer5"></div>
+        <div class="wallpaper__layer6" id="wallpaperLayer6"></div>
+        <div class="wallpaper__layer7" id="wallpaperLayer7"></div>
+    </section>
     
-    <div class="tvlines"></div>
-    <div class="gradient"></div>
-
-    <div class="text__container flex-column" id="textCotainer">
+    <section class="text__container flex-column" id="textCotainer">
         <h1 class="glitch" id="glitch">Martín Guevara</h1>
         <p class="glitch" id="paragraph">Personal portfolio</p>
-    </div>
+    </section>
 
-    <div class="clickable__box" id="clickableBox"></div>
+    <section class="clickable__box" id="clickableBox"></section>
 
+    <section class="content__container flex-column" id="contentContainer">
+        <header class="flex-row">
+            <div class="header__logo">MARTÍN GUEVARA | FULL STACK DEVELOPER</div>
+            <div class="header__networks">{ REDES }</div>
+        </header>
+
+        <main class="flex-row">
+            <article class="leftside">
+
+                <div class="explorer">
+                    <div class="explorer__title flex-row">
+                        
+                        <div class="explorer__title--leftside flex-row">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="">
+                            <img src="https://cdn1.iconfinder.com/data/icons/thin-ui-1/100/Noun_Project_100Icon_1px_grid_thin_ic_menu-512.png" alt="">
+                        </div>
+
+                        <div class="explorer__title--rightside flex-row">
+                            <img src="/src/images/minimize.png" alt="">
+                            <img src="/src/images/maximize.png" alt="">
+                            <img src="/src/images/close.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="rightside">
+                <p>hola</p>
+            </article>
+        </main>
+
+        <footer class="flex-row">Designed and developed by Martín Guevara ©</footer>
+    </section>
 </body>
 
 </html>
