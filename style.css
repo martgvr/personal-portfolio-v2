@@ -59,15 +59,16 @@ body {
 /* STYLES */
 
 .wallpaper__gradient {
-    top: 0;
-    width: 100%;
-    height: 100%;
     position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
     z-index: 9;
 
-    opacity: 0.2;
-    filter: contrast(1.8);
-    background: linear-gradient(180deg, #2a86e2, #201b20);
+    opacity: 0.15;
+    filter: contrast(3.6) brightness(0.6);
+    background-image: linear-gradient(to right top, #0c6d40, #598d8f, #008793, #548d76, #a8eb12);
 }
 
 .wallpaper__tvline {
@@ -103,7 +104,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* transition: 1s all ease-in-out; */
+    transition: 1s all ease-in-out;
 }
 
 /* WELCOME TEXT CONTAINER */
@@ -115,7 +116,7 @@ body {
 
     justify-content: center;
     align-items: center;
-    /* transition: 1s all ease-in-out; */
+    transition: 1s all ease-in-out;
 }
 
 .text__container h1 {
@@ -145,14 +146,14 @@ body {
 .glitch::before {
     color: #e91e63;
     z-index: -2;
-    left: var(--glitch-before-left);
+    left: var(--glitch-before-offset);
 }
 
 .glitch::after {
     color: #2196f3;
     z-index: -1;
     top: 0px;
-    left: var(--glitch-after-left);
+    left: var(--glitch-after-offset);
 }
 
 .clickable__box {
@@ -177,21 +178,27 @@ body {
 }
 
 header { 
-    min-height: 50px;
+    min-height: 60px;
+    height: 60px;
+    
     padding: 0 20px;
     
     align-items: center;
     justify-content: space-between;
+    color: rgb(255, 255, 255);
+
+    opacity: 0;
 }
 
 .header__logo {
     gap: 10px;
-    font-size: 1.4em;
+    font-size: 1.6em;
     align-items: center;
 }
 
 .header__logo--divider {
-    color: #ff2a6a;
+    color: #2bad61;
+    font-size: 1.4em;
 }
 
 .header__logo p:first-of-type {
@@ -204,7 +211,7 @@ header {
 
 .header__networks {
     font-size: 1.4em;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -230,10 +237,12 @@ header {
 }
 
 footer {
-    height: 50px;
+    height: 60px;
     align-items: center;
     justify-content: center;
     color: #727272;
+
+    opacity: 0;
 }
 
 main {
@@ -246,14 +255,14 @@ main {
 
 .leftside {
     min-width: 520px;
-    overflow: hidden;
+    opacity: 0;
 }
 
 .explorer {
-    opacity: 0.9;
-    height: 100%;
+    opacity: 1;
     background-color: #171921;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 100%;
 }
 
 .explorer__title {
@@ -329,8 +338,9 @@ main {
 
 .explorer__editor {
     background-color: #12141a;
-    height: 100%;
     font-size: 1.3em;
+    flex-grow: 1;
+    gap: 1px;
 
     overflow-y: scroll;
 }
@@ -362,11 +372,12 @@ main {
 
 .rightside {
     width: 100%;
+    opacity: 0;
 }
 
 .terminal {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px;
     font-size: 1.4em;
@@ -402,14 +413,11 @@ main {
 .terminal__techstack {
     margin: 10px 0 30px 0px;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
 }
 
 .terminal__techstack--tech {
-    background-image: url('./src/images/hexagon1.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(80, 80, 80, 0.4);
 
     height: 120px;
     width: 140px;
@@ -425,7 +433,7 @@ main {
 }
 
 .terminal__techstack--tech > div p {
-    color: rgb(163, 163, 163);
+    color: rgb(230, 230, 230);
     font-weight: 600;
     font-size: 0.8em;
     margin-bottom: -8px;
@@ -443,15 +451,15 @@ main {
 
 .terminal__projects--box {
     width: 400px;
-    background-color: rgba(10, 10, 10, 0.6);
-    border-radius: 10px;
+    background-color: rgba(60, 60, 60, 0.4);
+    color: rgb(210, 210, 210);
     padding: 20px;
     gap: 10px;
 }
 
 .terminal__projects--box h2 {
     font-size: 2.4em;
-    color: #d61e55;
+    color: #2bad61;
     font-family: 'Share Tech Mono', monospace;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -468,4 +476,9 @@ main {
 @keyframes fadeout {
     0% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }

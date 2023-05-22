@@ -1,23 +1,20 @@
-// SVG ASSIGNMENT
 for (let i = 1; i <= 7; i++) {
     const element = document.getElementById(`wallpaperLayer${i}`)
     element.style.backgroundImage = i === 7 ? `url("./src/images/c${i}.jpg")` : `url("./src/images/c${i}.svg")`
-    element.style.filter = "brightness(0.8) contrast(0.9) saturate(0.2)"
+    element.style.filter = "brightness(0.8) saturate(0.3)"
     element.style.zIndex = 8 - i
 }
 
 // PARALLAX EVENT
 const clickableBox = document.getElementById('clickableBox')
 
-// clickableBox.addEventListener('click', () => {
-    // ZOOM EFFECT
+clickableBox.addEventListener('click', () => {
     for (let i = 1; i <= 7; i++) {
         let element = document.getElementById(`wallpaperLayer${i}`)
         element.style.setProperty('transform', `scale(1.${i})`)
         i !== 7 && element.style.setProperty('top', '70px')
     }
 
-    // FADE OUT
     element = document.getElementById('textCotainer')
     document.getElementById('clickableBox').remove()
     element.style.setProperty('transform', `scale(2)`)
@@ -25,28 +22,38 @@ const clickableBox = document.getElementById('clickableBox')
 
     const contentContainer = document.getElementById('contentContainer')
 
-    // CONTENT BOXES
+    const header = document.getElementById('header')
+    const footer = document.getElementById('footer')
+    const leftside = document.getElementById('leftside')
+    const rightside = document.getElementById('rightside')
+
     setTimeout(() => {
-        element.remove()
+        element.style.display = "none"
         contentContainer.style.display = "flex"
+
+        header.style.animation = 'fadein 2s forwards'
+        footer.style.animation = 'fadein 2s forwards'
+        leftside.style.animation = 'fadein 1s forwards 0.5s'
+        rightside.style.animation = 'fadein 1s forwards 1s'
     }, 1000)
-// })
+})
 
 // GLITCH EFFECT
-const glitchTrigger = ({ element, beforeOffset, afterOffset, opacity, content }) => {
-    beforeOffset = beforeOffset || Math.floor((Math.random() * 10) + 20)
+const glitchTrigger = ({ element, afterOffset, beforeOffset, opacity, content }) => {
     afterOffset = afterOffset || Math.floor(Math.random() * 15)
-
+    beforeOffset = beforeOffset || Math.floor((Math.random() * 10) + 20)
+ 
     const targetElement = document.getElementById(element)
 
     targetElement.setAttribute('glitchContent', content || targetElement.innerText)
     targetElement.style.setProperty('opacity', opacity)
-    targetElement.style.setProperty('--glitch-after-left', afterOffset + 'px')
-    targetElement.style.setProperty('--glitch-before-left', beforeOffset + 'px')
-} 
+    targetElement.style.setProperty('--glitch-after-offset', afterOffset + 'px')
+    targetElement.style.setProperty('--glitch-before-offset', beforeOffset + 'px')
+}
 
-const paragraph = document.getElementById("paragraph")
 const glitch = document.getElementById("glitch")
+const paragraph = document.getElementById("paragraph")
+
 let timerDone = 0
 
 function timer(time) {

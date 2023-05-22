@@ -32,7 +32,7 @@
     <section class="clickable__box" id="clickableBox"></section>
 
     <section class="content__container flex-column" id="contentContainer">
-        <header class="flex-row">
+        <header class="flex-row" id="header">
 
             <div class="header__logo flex-row">
                 <p>MARTÍN GUEVARA</p>
@@ -60,8 +60,8 @@
         </header>
 
         <main class="flex-row">
-            <article class="leftside flex-column">
-                <div class="explorer">
+            <article class="leftside flex-column" id="leftside">
+                <div class="explorer flex-column">
                     <div class="explorer__title flex-row">
                         <div class="explorer__title--leftside flex-row">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="">
@@ -85,9 +85,7 @@
                         </div>
                     </div>
 
-                    <div class="explorer__editor">
-
-                        <div class="explorer__editor--line flex-column">
+                    <div class="explorer__editor flex-column">
                             <div class="flex-row">
                                 <div class="line__number">1</div>
                                 <div class="line__content">{</div>
@@ -268,12 +266,11 @@
                                 <div class="line__number">23</div>
                                 <div class="line__content">}</div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </article>
 
-            <article class="rightside">
+            <article class="rightside" id="rightside">
                 <div class="terminal flex-column">
                     <div class="terminal__command flex-row">
                         <div class="terminal__command--arrows flex-row">
@@ -368,7 +365,7 @@
             </article>
         </main>
 
-        <footer class="flex-row">Designed and developed by Martín Guevara ©</footer>
+        <footer class="flex-row" id="footer">Designed and developed by Martín Guevara ©</footer>
     </section>
 </body>
 
