@@ -177,17 +177,63 @@ body {
 }
 
 header { 
-    height: 50px;
+    min-height: 50px;
     padding: 0 20px;
     
     align-items: center;
     justify-content: space-between;
 }
 
+.header__logo {
+    gap: 10px;
+    font-size: 1.4em;
+    align-items: center;
+}
+
+.header__logo--divider {
+    color: #ff2a6a;
+}
+
+.header__logo p:first-of-type {
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-right: -6px;
+    font-size: 1.2em;
+}
+
+.header__networks {
+    font-size: 1.4em;
+    gap: 10px;
+    align-items: center;
+}
+
+.header__networks a {
+    gap: 10px;
+    align-items: center;
+}
+
+.header__networks a img {
+    width: 25px;
+    height: 25px;
+}
+
+.header__networks--bracket {
+    height: 30px;
+    width: fit-content;
+}
+
+.header__networks > img:last-of-type {
+    height: 30px;
+    width: fit-content;
+    transform: rotate(180deg);
+}
+
 footer {
     height: 50px;
     align-items: center;
     justify-content: center;
+    color: #727272;
 }
 
 main {
@@ -199,7 +245,8 @@ main {
 /* LEFT SIDE */
 
 .leftside {
-    width: 35%;
+    min-width: 520px;
+    overflow: hidden;
 }
 
 .explorer {
@@ -241,6 +288,74 @@ main {
 
 .explorer__title--leftside {
     gap: 20px;
+}
+
+.explorer__files {
+    height: 34px;
+    background-color: #171921;
+    border-bottom: 1px solid #0a0b0f;
+}
+
+.explorer__files--current {
+    font-size: 1.1em;
+    color: #b4b4b4;
+    background-color: #12141a;
+    border-top: 1px solid #98a2b5;
+    border-right: 1px solid #0a0b0f;
+    border-bottom: 1px solid #12141a;
+
+    padding: 10px;
+    width: 147px;
+    height: calc(100% + 1px);
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.explorer__files--current > div {
+    gap: 10px;
+    align-items: center;
+}
+
+.explorer__files--current div img {
+    height: 11px;
+    width: 14px;
+}
+
+.explorer__files--current > img {
+    height: 8px;
+    width: 8px;
+}
+
+.explorer__editor {
+    background-color: #12141a;
+    height: 100%;
+    font-size: 1.3em;
+
+    overflow-y: scroll;
+}
+
+.explorer__editor--line {
+    height: 19px;
+}
+
+.line__number {
+    width: 68px;
+    color: #383a43;
+    border-right: 1px solid #1f2028;
+    text-align: center;
+}
+
+.line__indent { width: 32px; }
+.line__blue { color: #0da6ff; }
+.line__green { color: #bdff7a; }
+.line__yellow { color: #ffd15c; }
+
+.line__symbol {
+    color: #585a5c;
+    margin-left: 3px;
+    margin-right: 12px;
+    font-weight: 600;
 }
 
 /* RIGHT SIDE */
@@ -285,7 +400,7 @@ main {
 }
 
 .terminal__techstack {
-    margin: 10px 0px;
+    margin: 10px 0 30px 0px;
     width: 100%;
     gap: 10px;
 }
@@ -321,7 +436,7 @@ main {
 }
 
 .terminal__projects {
-    margin: 10px 0;
+    margin: 10px 0 30px 0;
     gap: 20px;
     flex-wrap: wrap;
 }

@@ -33,16 +33,36 @@
 
     <section class="content__container flex-column" id="contentContainer">
         <header class="flex-row">
-            <div class="header__logo">MARTÍN GUEVARA | FULL STACK DEVELOPER</div>
-            <div class="header__networks">{ REDES }</div>
+
+            <div class="header__logo flex-row">
+                <p>MARTÍN GUEVARA</p>
+                <p class="header__logo--divider">|</p> 
+                <p>FULL STACK DEVELOPER</p>
+            </div>
+
+            <div class="header__networks flex-row">
+                <img src="./src/images/bracket.png" alt="" class="header__networks--bracket">
+
+                <a href="https://github.com/martgvr" class="flex-row">
+                    <p>Github:</p>
+                    <img src="./src/images/github.png" alt="">
+                    <p>,</p>
+                </a>
+
+                <a href="https://github.com/martgvr" class="flex-row">
+                    <p>LinkedIn:</p>
+                    <img src="./src/images/linkedin.png" alt="">
+                </a>
+                
+                <img src="./src/images/bracket.png" alt="" class="header__networks--bracket">
+            </div>
+
         </header>
 
         <main class="flex-row">
-            <article class="leftside">
-
+            <article class="leftside flex-column">
                 <div class="explorer">
                     <div class="explorer__title flex-row">
-                        
                         <div class="explorer__title--leftside flex-row">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="">
                             <img src="https://cdn1.iconfinder.com/data/icons/thin-ui-1/100/Noun_Project_100Icon_1px_grid_thin_ic_menu-512.png" alt="">
@@ -54,12 +74,206 @@
                             <img src="/src/images/close.png" alt="">
                         </div>
                     </div>
-                </div>
 
+                    <div class="explorer__files">
+                        <div class="explorer__files--current flex-row">
+                            <div class="flex-row">
+                                <img src="./src/images/json.png" alt="">
+                                <p>whoami.json</p>
+                            </div>
+                            <img src="./src/images/close.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="explorer__editor">
+
+                        <div class="explorer__editor--line flex-column">
+                            <div class="flex-row">
+                                <div class="line__number">1</div>
+                                <div class="line__content">{</div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">2</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__yellow">"nombre"</p><p class="line__symbol">:</p>
+                                    <p class="line__green">"Martín Guevara"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">3</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__yellow">"cargo"</p><p class="line__symbol">:</p>
+                                    <p class="line__green">"Desarrollador Full Stack"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">4</div>
+                                <div class="line__indent"></div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">5</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__yellow">"estudios"</p><p class="line__symbol">:</p><p class="line__blue">[</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">6</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"Tec. Sup Informática (en progreso) - UTN"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">7</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"Desarrollo Full Stack - Coderhouse"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">8</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__blue">]</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">9</div>
+                                <div class="line__indent"></div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">10</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__yellow">"stack_principal"</p><p class="line__symbol">:</p><p class="line__blue">[</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">11</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"MongoDB"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">12</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"Express"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">13</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"React"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">14</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"Node"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">15</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__blue">]</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">16</div>
+                                <div class="line__indent"></div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">17</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__yellow">"otras_tecnologias"</p><p class="line__symbol">:</p><p class="line__blue">[</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">18</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"C"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">19</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"DenoJS"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">20</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"Typescript"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">21</div>
+                                <div class="line__indent"></div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__green">"React Native"</p><p class="line__symbol">,</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">22</div>
+                                <div class="line__indent"></div>
+                                <div class="line__content flex-row">
+                                    <p class="line__blue">]</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="line__number">23</div>
+                                <div class="line__content">}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </article>
 
             <article class="rightside">
-
                 <div class="terminal flex-column">
                     <div class="terminal__command flex-row">
                         <div class="terminal__command--arrows flex-row">
@@ -151,7 +365,6 @@
                         </div>
                     </div>
                 </div>
-
             </article>
         </main>
 
