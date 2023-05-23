@@ -1,0 +1,10 @@
+.contentfooter__container {
+    grid-area: footer;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    font-size: 0.7em;
+    color: #727272;
+}

@@ -1,0 +1,114 @@
+.contenteditor__container {
+    grid-area: editor;
+    margin: 0px 10px 0px 20px;
+
+    background-color: #171921;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    opacity: 0;
+}
+
+/* TITLEBAR */
+
+.editor__titlebar {
+    height: 34px;
+    padding: 0 18px 0 10px;
+    border-bottom: 1px solid #0a0b0f;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.editor__titlebar--leftside {
+    align-items: center;
+    gap: 20px;
+}
+
+.editor__titlebar--leftside img {
+    width: 16px;
+    height: 16px;
+}
+
+.editor__titlebar--leftside img:last-of-type {
+    width: 22px;
+    height: 17px;
+    filter: contrast(0) brightness(2);
+}
+
+.editor__titlebar--rightside {
+    gap: 36px;
+}
+
+.editor__titlebar--rightside img {
+    width: 10px;
+    height: 10px;
+    filter: brightness(1.4);
+}
+
+/* FILEBAR */
+
+.editor__filebar {
+    height: 34px;
+    background-color: #171921;
+    border-bottom: 1px solid #0a0b0f;
+}
+
+.editor__filebar--current {
+    font-size: 0.72em;
+    color: #b4b4b4;
+    background-color: #12141a;
+    border-top: 1px solid #98a2b5;
+    border-right: 1px solid #0a0b0f;
+    border-bottom: 1px solid #12141a;
+
+    padding: 10px;
+    width: 147px;
+    height: calc(100% + 1px);
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.editor__filebar--current > div {
+    gap: 10px;
+    align-items: center;
+}
+
+.editor__filebar--current div img {
+    height: 11px;
+    width: 14px;
+}
+
+.editor__filebar--current > img {
+    height: 8px;
+    width: 8px;
+}
+
+/* TEXT */
+
+.editor__text {
+    background-color: #12141a;
+    font-size: 0.83em;
+    flex-grow: 1;
+    gap: 1px;
+    overflow-y: scroll;
+}
+
+.line__number {
+    width: 68px;
+    color: #383a43;
+    border-right: 1px solid #1f2028;
+    text-align: center;
+}
+
+.line__symbol {
+    color: #585a5c;
+    margin-left: 3px;
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+.line__indent { width: 32px; }
+.line__blue { color: #0da6ff; }
+.line__green { color: #bdff7a; }
+.line__yellow { color: #ffd15c; }

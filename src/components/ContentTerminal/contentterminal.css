@@ -1,0 +1,92 @@
+.contentterminal__container {
+    grid-area: console;
+
+    margin: 0px 20px 0px 10px;
+    padding: 30px;
+    gap: 2px;
+
+    font-size: 0.9em;
+
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.terminal__command {
+    gap: 10px;
+    align-items: center;
+}
+
+.terminal__command img {
+    width: 13px;
+    height: 11px;
+}
+
+.terminal__command--arrows > p:nth-child(1) { color: #a04336; }
+.terminal__command--arrows > p:nth-child(2) { color: #80a265; }
+.terminal__command--arrows > p:nth-child(3) { color: #eab675; }
+.terminal__command > p:nth-child(3) { color: #83c0bd; }
+
+.terminal__techstack {
+    margin: 10px 0 30px 0px;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.terminal__techstack--tech {
+    background-color: rgba(80, 80, 80, 0.4);
+
+    height: 110px;
+    width: 140px;
+    opacity: 0.8;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal__techstack--tech {
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal__techstack--tech p {
+    color: rgb(230, 230, 230);
+    font-weight: 600;
+    font-size: 0.8em;
+    margin-bottom: -8px;
+}
+
+.terminal__techstack--tech img {
+    width: 60px;
+}
+
+.terminal__projects {
+    margin: 10px 0 30px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.terminal__projects--box {
+    width: 400px;
+    background-color: rgba(60, 60, 60, 0.4);
+    color: rgb(210, 210, 210);
+    padding: 20px;
+    gap: 10px;
+}
+
+.terminal__projects--box h2 {
+    font-size: 2.4em;
+    color: #2bad61;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.terminal__projects--box h3 {
+    font-size: 1.1em;
+}
+
+.terminal__projects--box p {
+    font-size: 0.9em;
+}

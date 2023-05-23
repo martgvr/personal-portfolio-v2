@@ -1,0 +1,52 @@
+.contentheader__container {
+    grid-area: header;
+
+    opacity: 0;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    gap: 10px;
+    align-items: center;
+}
+
+.header__logo--divider {
+    color: #2bad61;
+    font-size: 1.4em;
+}
+
+.header__logo p:first-of-type {
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-right: -6px;
+    font-size: 1.2em;
+}
+
+.header__networks {
+    gap: 20px;
+    align-items: center;
+}
+
+.header__networks a {
+    gap: 10px;
+    align-items: center;
+}
+
+.header__networks a img {
+    width: 25px;
+    height: 25px;
+}
+
+.header__networks--bracket {
+    height: 30px;
+    width: fit-content;
+}
+
+.header__networks > img:last-of-type {
+    height: 30px;
+    width: fit-content;
+    transform: rotate(180deg);
+}
