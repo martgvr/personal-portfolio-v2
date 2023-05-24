@@ -50,3 +50,13 @@
     width: fit-content;
     transform: rotate(180deg);
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .contentheader__container {
+        overflow: hidden;
+        font-size: 0.6em;
+        max-width: calc(100vw - 20px);
+    }
+}

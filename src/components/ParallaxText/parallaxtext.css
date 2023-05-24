@@ -14,19 +14,18 @@
 }
 
 .parallaxtext__container h1 {
+    position: relative;
     z-index: 6;
     font-size: 7em;
-    letter-spacing: 5px;
     text-align: center;
-
-    position: relative;
+    letter-spacing: 5px;
 }
 
 .parallaxtext__container h3 {
     position: relative;
 
-    text-align: center;
     width: fit-content;
+    text-align: center;
     margin-top: -22px;
     margin-bottom: 16px;
 
@@ -71,4 +70,19 @@
     width: 100%;
     z-index: -1;
     left: var(--glitch-after-offset);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .parallaxtext__container {
+        font-size: 0.6em;
+    }
+    .parallaxtext__container h3 {
+        margin-top: 0px;
+        margin-bottom: 22px;
+    }
+    .parallaxtext__container p {
+        font-size: 1.8em;
+    }
 }

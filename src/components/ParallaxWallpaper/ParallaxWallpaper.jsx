@@ -16,13 +16,13 @@ function ParallaxWallpaper() {
 			<div className="parallax__tvlines"></div>
 			<div className="parallax__gradient"></div>
 
-			<div className="parallax__layer1" id="parallaxLayer1"></div>
-			<div className="parallax__layer2" id="parallaxLayer2"></div>
-			<div className="parallax__layer3" id="parallaxLayer3"></div>
-			<div className="parallax__layer4" id="parallaxLayer4"></div>
-			<div className="parallax__layer5" id="parallaxLayer5"></div>
-			<div className="parallax__layer6" id="parallaxLayer6"></div>
-			<div className="parallax__layer7" id="parallaxLayer7"></div>
+			<div id="parallaxLayer1"></div>
+			<div id="parallaxLayer2"></div>
+			<div id="parallaxLayer3"></div>
+			<div id="parallaxLayer4"></div>
+			<div id="parallaxLayer5"></div>
+			<div id="parallaxLayer6"></div>
+			<div id="parallaxLayer7"></div>
 		</article>
 	)
 }

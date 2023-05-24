@@ -9,9 +9,9 @@ function ParallaxBox() {
 			i !== 7 && element.style.setProperty("top", "70px")
 		}
 
-		const element = document.getElementById("parallaxText")
-
 		document.getElementById("parallaxBox").remove()
+
+		const element = document.getElementById("parallaxText")
 		element.style.setProperty("transform", `scale(2)`)
 		element.style.animation = "fadeout 0.7s forwards 0.2s"
 

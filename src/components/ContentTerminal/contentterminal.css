@@ -90,3 +90,12 @@
 .terminal__projects--box p {
     font-size: 0.9em;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 1460px) {
+    .contentterminal__container {
+        margin: 0px 10px 0px 10px;
+        width: calc(100vw - 20px);
+    }
+}

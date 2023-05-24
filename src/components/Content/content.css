@@ -12,3 +12,19 @@
                             "editor console"
                             "footer footer";
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 1460px) {
+    .content__container {
+        font-size: 0.8em;
+
+        grid-template-rows: 60px 500px 1fr 60px;
+        grid-template-columns: 1fr;
+
+        grid-template-areas:    "header"
+                                "editor"
+                                "console"
+                                "footer";
+    }    
+}

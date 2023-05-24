@@ -112,3 +112,12 @@
 .line__blue { color: #0da6ff; }
 .line__green { color: #bdff7a; }
 .line__yellow { color: #ffd15c; }
+
+/* RESPONSIVE */
+
+@media (max-width: 1460px) {
+    .contenteditor__container {
+        margin: 0 10px 10px 10px;
+        width: calc(100vw - 20px);
+    }
+}
