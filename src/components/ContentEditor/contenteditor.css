@@ -3,7 +3,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
     opacity: 0;
-    min-width: 500px;
+    min-width: 600px;
 }
 
 /* TITLEBAR */
@@ -110,3 +110,21 @@
 .line__blue { color: #0da6ff; }
 .line__green { color: #bdff7a; }
 .line__yellow { color: #ffd15c; }
+
+@media (max-width: 1400px) {
+    .contenteditor__container {
+        height: 600px;
+    }    
+}
+
+@media (max-width: 900px) {
+    .contenteditor__container {
+        min-width: 0;
+    }    
+}
+
+@media (max-width: 530px) {
+    .editor__text {
+        font-size: 0.8em
+    }    
+}

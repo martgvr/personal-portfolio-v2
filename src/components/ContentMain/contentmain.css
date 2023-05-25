@@ -3,7 +3,7 @@
     gap: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .contentmain__container {
         flex-direction: column;
     }
