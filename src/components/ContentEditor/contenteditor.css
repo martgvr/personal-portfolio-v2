@@ -1,10 +1,9 @@
 .contenteditor__container {
-    grid-area: editor;
-
     background-color: #171921;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
     opacity: 0;
+    min-width: 500px;
 }
 
 /* TITLEBAR */
@@ -111,11 +110,3 @@
 .line__blue { color: #0da6ff; }
 .line__green { color: #bdff7a; }
 .line__yellow { color: #ffd15c; }
-
-/* RESPONSIVE */
-
-@media (max-width: 1460px) {
-    .contenteditor__container {
-        width: calc(100vw - 20px);
-    }
-}

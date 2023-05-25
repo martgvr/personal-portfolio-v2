@@ -1,7 +1,6 @@
 .contentterminal__container {
-    grid-area: console;
-
     padding: 30px;
+    flex-grow: 1;
     gap: 2px;
 
     font-size: 0.9em;
@@ -64,18 +63,4 @@
     margin: 10px 0 30px 0;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1460px) {
-    .contentterminal__container {
-        width: calc(100vw - 20px);
-    }
-}
-
-@media (max-width: 900px) {
-    .terminal__techstack--tech {
-        flex-grow: 1;
-    }
 }

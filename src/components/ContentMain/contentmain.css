@@ -1,0 +1,10 @@
+.contentmain__container {
+    padding: 0 20px;
+    gap: 10px;
+}
+
+@media (max-width: 1200px) {
+    .contentmain__container {
+        flex-direction: column;
+    }
+}
