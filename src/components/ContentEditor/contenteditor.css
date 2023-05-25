@@ -1,6 +1,5 @@
 .contenteditor__container {
     grid-area: editor;
-    margin: 0px 10px 0px 20px;
 
     background-color: #171921;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -117,7 +116,6 @@
 
 @media (max-width: 1460px) {
     .contenteditor__container {
-        margin: 0 10px 10px 10px;
         width: calc(100vw - 20px);
     }
 }
