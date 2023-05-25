@@ -8,3 +8,9 @@
         flex-direction: column;
     }
 }
+
+@media (max-width: 500px) {
+    .contentmain__container {
+        padding: 0 10px;
+    }
+}
