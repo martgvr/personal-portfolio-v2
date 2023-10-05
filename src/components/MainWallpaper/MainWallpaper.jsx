@@ -1,6 +1,5 @@
 import "./MainWallpaper.css"
 import { useEffect } from "react"
-import { ParallaxLayer } from "@react-spring/parallax"
 
 export default function MainWallpaper() {
 	useEffect(() => {
@@ -17,9 +16,9 @@ export default function MainWallpaper() {
 			<div id="wallpaperLayer2" offset={0} speed={0}></div>
 			<div id="wallpaperLayer3" offset={0} speed={0}></div>
 			<div id="wallpaperLayer4" offset={0} speed={0}></div>
-			<ParallaxLayer id="wallpaperLayer5" offset={0} speed={0.2}></ParallaxLayer>
-			<ParallaxLayer id="wallpaperLayer6" offset={0} speed={0.3}></ParallaxLayer>
-			<ParallaxLayer id="wallpaperLayer7" offset={0} speed={0.5}></ParallaxLayer>
+			<div id="wallpaperLayer5" offset={0} speed={0.2}></div>
+			<div id="wallpaperLayer6" offset={0} speed={0.3}></div>
+			<div id="wallpaperLayer7" offset={0} speed={0.5}></div>
 		</article>
 	)
 }

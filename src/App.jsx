@@ -1,19 +1,23 @@
 import "./App.css"
 
-import { Parallax, ParallaxLayer } from "@react-spring/parallax"
-
 import Main from "./screens/Main/Main"
-import Projects from "./screens/Projects/Projects"
 import About from "./screens/About/About"
+import Projects from "./screens/Projects/Projects"
+
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 function App() {
+	const { scrollY } = useScroll()
+
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		console.log("Page scroll: ", latest)
+	})
+
 	return (
 		<>
-			<Parallax pages={3}>
-				<Main />
-				<Projects />
-				<About />
-			</Parallax>
+			<Main />
+			<About />
+			<Projects />
 		</>
 	)
 }

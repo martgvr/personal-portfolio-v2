@@ -2,6 +2,6 @@ import './Projects.css'
 
 export default function Projects() {
   return (
-    <div>Projects</div>
+    <article className='projects__container'>Projects</article>
   )
 }

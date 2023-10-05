@@ -1,6 +1,8 @@
 import './MainText.css'
 import { useEffect } from "react"
+import { motion } from 'framer-motion'
 import { glitchTrigger } from "./glitchtrigger.js"
+
 
 export default function MainText() {
     useEffect(() => {
@@ -36,8 +38,19 @@ export default function MainText() {
 	}, [])
 
 	return (
-		<article className="maintext__container flex-column">
-			<h1 className="glitch__effect" id="mainTextTitle">Martín Guevara</h1>
+		<article className="maintext__container flex-column"> 
+			<motion.h1 
+				className="glitch__effect"
+				id="mainTextTitle"
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: '-200%' }
+				}}
+				animate='visible'
+				transition={{ duration: 0.5, ease: 'easeInOut' }}
+			>
+				Martín Guevara
+			</motion.h1>
 			<h3 className="glitch__effect" id="mainTextSubtitle">Personal portfolio</h3>
 			<p className="glitch__effect" id="mainTextParagraph">Scroll to discover!</p>
 		</article>
