@@ -1,7 +1,15 @@
 import "./MainWallpaper.css"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 export default function MainWallpaper() {
+	const { scrollY } = useScroll()
+	const [scrollPosition, setScrollPosition] = useState(scrollY)
+
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		setScrollPosition(latest)
+	})
+
 	useEffect(() => {
 		for (let i = 1; i <= 7; i++) {
 			const element = document.getElementById(`wallpaperLayer${i}`)
@@ -12,13 +20,14 @@ export default function MainWallpaper() {
 
 	return (
 		<article className="mainwallpaper__container" id="mainWallpaperContainer">
-			<div id="wallpaperLayer1" offset={0} speed={0}></div>
-			<div id="wallpaperLayer2" offset={0} speed={0}></div>
-			<div id="wallpaperLayer3" offset={0} speed={0}></div>
-			<div id="wallpaperLayer4" offset={0} speed={0}></div>
-			<div id="wallpaperLayer5" offset={0} speed={0.2}></div>
-			<div id="wallpaperLayer6" offset={0} speed={0.3}></div>
-			<div id="wallpaperLayer7" offset={0} speed={0.5}></div>
+			<div id="wallpaperLayer1"></div>
+			<div id="wallpaperLayer2"></div>
+			<div id="wallpaperLayer3"></div>
+			<div id="wallpaperLayer4"></div>
+
+			<div id="wallpaperLayer5" style={{ top: scrollPosition * (-0.1) }}></div>
+			<div id="wallpaperLayer6" style={{ top: scrollPosition * (-0.1) }}></div>
+			<div id="wallpaperLayer7" style={{ top: scrollPosition * (-0.3) }}></div>
 		</article>
 	)
 }
