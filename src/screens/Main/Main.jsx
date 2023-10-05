@@ -5,9 +5,9 @@ import MainWallpaper from "../../components/MainWallpaper/MainWallpaper"
 
 export default function Main() {
 	return (
-		<div className="main__container">
+		<article className="main__container">
             <MainText />
             <MainWallpaper />
-		</div>
+		</article>
 	)
 }
