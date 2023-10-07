@@ -6,9 +6,7 @@ export default function MainWallpaper() {
 	const { scrollY } = useScroll()
 	const [scrollPosition, setScrollPosition] = useState(scrollY)
 
-	useMotionValueEvent(scrollY, "change", (latest) => {
-		setScrollPosition(latest)
-	})
+	useMotionValueEvent(scrollY, "change", (latest) => setScrollPosition(latest))
 
 	useEffect(() => {
 		for (let i = 1; i <= 7; i++) {
@@ -28,6 +26,8 @@ export default function MainWallpaper() {
 			<div id="wallpaperLayer5" style={{ top: scrollPosition * (-0.1) }}></div>
 			<div id="wallpaperLayer6" style={{ top: scrollPosition * (-0.1) }}></div>
 			<div id="wallpaperLayer7" style={{ top: scrollPosition * (-0.3) }}></div>
+
+			<img src="scroll.png" alt="" style={{ opacity: 0.7 - (scrollPosition * 0.0015) }} />
 		</article>
 	)
 }

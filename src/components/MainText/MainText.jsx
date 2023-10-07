@@ -1,10 +1,14 @@
 import './MainText.css'
-import { useEffect } from "react"
-import { motion } from 'framer-motion'
+import { useEffect, useState } from "react"
 import { glitchTrigger } from "./glitchtrigger.js"
-
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 export default function MainText() {
+	const { scrollY } = useScroll()
+	const [scrollPosition, setScrollPosition] = useState(0)
+
+	useMotionValueEvent(scrollY, "change", (latest) => setScrollPosition(latest))
+
     useEffect(() => {
 		let timerDone = 0
 
@@ -17,7 +21,7 @@ export default function MainText() {
                 setTimeout(() => glitchTrigger({ element, opacity: 0.8 }), 150)
                 setTimeout(() => glitchTrigger({ element, opacity: 1 }), 200)
                 setTimeout(() => glitchTrigger({ element, opacity: 0.4 }), 650)
-                setTimeout(() => glitchTrigger({ element, beforeOffset: 1, afterOffset: 1, opacity: 0.8 }), 850)
+                setTimeout(() => glitchTrigger({ element, beforeOffset: 1, afterOffset: 1, opacity: 1 }), 850)
             })
 
 			setTimeout(() => (timerDone = 1), time)
@@ -39,20 +43,13 @@ export default function MainText() {
 
 	return (
 		<article className="maintext__container flex-column"> 
-			<motion.h1 
-				className="glitch__effect"
-				id="mainTextTitle"
-				variants={{
-					visible: { opacity: 1, y: 0 },
-					hidden: { opacity: 0, y: '-200%' }
-				}}
-				animate='visible'
-				transition={{ duration: 0.5, ease: 'easeInOut' }}
-			>
-				Martín Guevara
-			</motion.h1>
-			<h3 className="glitch__effect" id="mainTextSubtitle">Personal portfolio</h3>
-			<p className="glitch__effect" id="mainTextParagraph">Scroll to discover!</p>
+			<h1 className="glitch__effect" id="mainTextTitle" style={{ top: scrollPosition * (-0.3) }}>Martín Guevara</h1>
+			<h3 className="glitch__effect" id="mainTextSubtitle" style={{ top: scrollPosition * (-0.2) }}>Personal portfolio</h3>
+			<p className="glitch__effect" id="mainTextParagraph" style={{ top: scrollPosition * (-0.05) }}>
+				{	
+					scrollPosition < 200 ? 'Scroll to discover' : 'Keep scrolling!!!!'
+				}
+			</p>
 		</article>
 	)
 }

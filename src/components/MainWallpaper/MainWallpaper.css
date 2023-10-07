@@ -10,3 +10,14 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.mainwallpaper__container img {
+    width: 100px;
+    z-index: 7;
+
+    position: absolute;
+    margin: auto;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+}
