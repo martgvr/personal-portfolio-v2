@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 
-export default function Reveal({ children }) {
+export default function Reveal({ children, slide, delay }) {
 	const ref = useRef(null)
 	const mainControls = useAnimation()
 	const isInView = useInView(ref, { once: false })
@@ -15,13 +15,15 @@ export default function Reveal({ children }) {
 	return (
 		<div ref={ref}>
 			<motion.div
-				variants={{
-					hidden: { opacity: 0, y: 75 },
-					visible: { opacity: 1, y: 0 },
-				}}
+				variants={
+					slide ?
+					{ hidden: { opacity: 0, x: -75 }, visible: { opacity: 1, x: 0 } }
+					:
+					{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }
+				}
 				initial="hidden"
 				animate={mainControls}
-				transition={{ duration: 0.5, delay: 0.25 }}
+				transition={{ duration: 0.5, delay: delay || 0.25 }}
 			>
 				{children}
 			</motion.div>

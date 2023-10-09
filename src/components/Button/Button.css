@@ -1,0 +1,11 @@
+.button__container {
+    background-color: #936767;
+    width: fit-content;
+    padding: 8px 20px;
+    border-radius: 12px;
+}
+
+.button__container:hover {
+    background-color: black;
+    cursor: pointer;
+}

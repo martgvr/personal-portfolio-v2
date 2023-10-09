@@ -1,6 +1,47 @@
 .projects__container {
     height: 100vh;
-    
     color: black;
     background-color: white;
+}
+
+.projects__content {
+    padding: 100px 200px;
+    height: 100%;
+    gap: 20px;
+}
+
+.projects__content h1 {
+    font-size: 3.4em;
+    text-align: center;
+}
+
+.projects__navbar {
+    align-self: center;
+    border: 1px solid #949494;
+    justify-self: flex-start;
+    width: fit-content;
+    align-self: center;
+    padding: 12px 80px;
+    gap: 100px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.projects__navbar li {
+    padding: 4px 20px;
+    border-radius: 6px;
+    color: #949494;
+}
+
+.projects__navbar li:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.projects__navbar .active {
+    color: rgb(0, 0, 0);
+}
+
+.projects__cards {
+    gap: 30px;
 }
