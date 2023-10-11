@@ -1,5 +1,5 @@
 .projectsCard {
-    width: 420px;
+    width: 450px;
     height: 280px;
     border-radius: 10px;
     background-position: center center;
@@ -24,6 +24,17 @@
 
 .projectsCard__content:hover {
     opacity: 1;
+}
+
+.projectsCard__middle {
+    gap: 6px;
+}
+
+.projectsCard__middle p {
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgb(122, 122, 122);
+    font-size: 0.8em;
 }
 
 .projectsCard__lower {

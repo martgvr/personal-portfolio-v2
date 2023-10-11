@@ -1,0 +1,15 @@
+.aboutstack__technologies {
+    gap: 20px;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.aboutstack__technologies > div {
+    width: 50%;
+}
+
+.frontend__container {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #4b4141;
+}
