@@ -1,4 +1,4 @@
-import "./Projects.css"
+import "./projects.css"
 
 import Reveal from "../../components/Reveal/Reveal"
 import ProjectsCard from "../../components/ProjectsCard/ProjectsCard"

@@ -1,4 +1,4 @@
-import "./ProjectsCard.css"
+import "./projectscard.css"
 import { useState } from "react"
 
 import Reveal from "../Reveal/Reveal"

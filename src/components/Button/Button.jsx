@@ -1,4 +1,4 @@
-import "./Button.css"
+import "./button.css"
 import { useState } from "react"
 
 export default function Button({ text, bgColor, txtColor, hoverBgColor, hoverTxtColor, link }) {

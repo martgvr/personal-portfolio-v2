@@ -1,4 +1,4 @@
-import "./About.css"
+import "./about.css"
 import { useState } from "react"
 
 import Reveal from "../../components/Reveal/Reveal"

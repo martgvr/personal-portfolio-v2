@@ -1,3 +1,4 @@
+import './abouteducation.css'
 import Reveal from "../../components/Reveal/Reveal"
 
 export default function AboutEducation() {

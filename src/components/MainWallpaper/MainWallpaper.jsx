@@ -1,4 +1,4 @@
-import "./MainWallpaper.css"
+import "./mainwallpaper.css"
 import { useEffect, useState } from "react"
 import { useMotionValueEvent, useScroll } from "framer-motion"
 
