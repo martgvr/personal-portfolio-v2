@@ -1,5 +1,6 @@
 import "./abouteducationyear.css"
-import AboutEducationCourse from "../AboutEducationCourse/AboutEducationCourse"
+
+import AboutEducationCard from "../AboutEducationCard/AboutEducationCard"
 
 export default function AboutEducationYear({ year, data }) {
 	return (
@@ -8,7 +9,7 @@ export default function AboutEducationYear({ year, data }) {
 
 			<div className="abouteducationyear__timeline flex-row">
                 {
-                    data.map(course => <AboutEducationCourse data={course} />)
+                    data.map(course => <AboutEducationCard data={course} />)
                 }
 			</div>
 		</div>

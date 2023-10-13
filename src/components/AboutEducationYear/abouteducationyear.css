@@ -1,15 +1,8 @@
-.abouteducationyear__container {
-    margin-bottom: 190px;
-}
-
-.abouteducationyear__container h2 {
+.abouteducationyear__container > h2 {
     color: #eeabab;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .abouteducationyear__timeline {
-    height: 30px;
-    border-radius: 20px;
-    background-color: rgb(105, 105, 105);
-    gap: 250px;
+    gap: 20px;
 }
