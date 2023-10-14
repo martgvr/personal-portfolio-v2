@@ -1,3 +1,47 @@
 .abouteducation__container {
-    gap: 40px;
+    gap: 20px;
+}
+
+.abouteducation__years {
+    gap: 20px;
+}
+
+.abouteducation__years > div {
+    flex-grow: 1;
+}
+
+.abouteducation__header {
+    justify-content: space-between;
+}
+
+.abouteducation__yearSelector {
+    gap: 30px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 0 40px;
+    align-self: center;
+    border-radius: 30px;
+    border: 1px solid #4b4141;
+}
+
+.abouteducation__yearSelector li {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #645d5d;
+}
+
+.abouteducation__yearSelector li:hover {
+    cursor: pointer;
+}
+
+.abouteducation__yearSelector p {
+    color: #4b4141;
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.abouteducation__yearSelector .active {
+    color: #ffffff
 }
