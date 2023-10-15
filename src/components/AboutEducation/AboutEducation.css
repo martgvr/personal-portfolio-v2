@@ -45,3 +45,40 @@
 .abouteducation__yearSelector .active {
     color: #ffffff
 }
+
+@media (max-width: 1700px) {
+    .abouteducation__years {
+        flex-direction: column;
+    }
+
+    .abouteducation__container {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1000px) {
+    .abouteducation__container h2 {
+        display: none;
+    }
+
+    .abouteducation__header {
+        gap: 20px;
+        width: fit-content;
+        flex-direction: column;
+
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .abouteducation__container h1 {
+        text-align: center;
+    }
+    
+    .abouteducation__header {
+        width: 100%;
+    }
+}

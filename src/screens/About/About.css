@@ -1,6 +1,6 @@
 .about__container {
-    justify-content: center;
     height: 100vh;
+    justify-content: center;
 }
 
 .about__container h1 {
@@ -8,20 +8,22 @@
 }
 
 .about__navbar {
-    border: 1px solid #b17b7b;
-    justify-self: flex-start;
-    width: fit-content;
     align-self: center;
-    padding: 12px 80px;
+    justify-self: flex-start;
+
     gap: 100px;
-    border-radius: 10px;
+    width: fit-content;
+    padding: 12px 80px;
     margin-bottom: 100px;
+
+    border-radius: 10px;
+    border: 1px solid #b17b7b;
 }
 
 .about__navbar li {
+    color: #7a5f5f;
     padding: 4px 20px;
     border-radius: 6px;
-    color: #7a5f5f;
 }
 
 .about__navbar li:hover {
@@ -33,10 +35,10 @@
     color: white;
 }
 
-.about__text { 
+.about__text {
     gap: 10px;
-    padding: 0 200px;
     height: 100%;
+    padding: 0 200px;
 }
 
 .shape__divider {
@@ -46,11 +48,44 @@
 }
 
 .shape__divider svg {
-    display: block;
     height: 93px;
+    display: block;
     width: calc(125% + 1.3px);
 }
 
 .shape__divider path {
     fill: #282433;
+}
+
+@media (max-width: 1700px) {
+    .about__container {
+        height: auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .about__text {
+        padding: 0;
+        align-items: center;
+    }
+
+    .about__container {
+        height: auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .about__navbar {
+        gap: 50px;
+        padding: 12px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about__navbar {
+        gap: 20px;
+        padding: 12px 10px;
+    }
 }

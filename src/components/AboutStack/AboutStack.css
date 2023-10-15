@@ -20,3 +20,33 @@
 .aboutstack__lower--cards {
     gap: 10px;
 }
+
+@media (max-width: 1700px) {
+    .aboutstack__technologies {
+        flex-direction: column;
+    }
+
+    .aboutstack__technologies > div {
+        width: 100%;
+        padding: 30px 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .aboutstack__container h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .aboutstack__lower--cards {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 30px 50px;
+    }
+
+    .stackcards__container {
+        gap: 10px;
+        height: 100%;
+        flex-direction: column;
+    }    
+}

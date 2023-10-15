@@ -17,3 +17,24 @@
     width: 40px;
     height: 40px;
 }
+
+@media (max-width: 1000px) {
+    .aboutme__container h1 {
+        font-size: 3em;
+    }
+    .aboutme__container p {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutme__container h1 {
+        font-size: 2em;
+    }
+    .aboutme__container h2 {
+        font-size: 1.2em;
+    }
+    .aboutme__container p {
+        width: 350px;
+    }
+}
