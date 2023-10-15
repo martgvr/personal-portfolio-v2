@@ -1,4 +1,4 @@
-import "./main.css"
+import './main.css'
 
 import MainText from "../../components/MainText/MainText"
 import MainWallpaper from "../../components/MainWallpaper/MainWallpaper"
