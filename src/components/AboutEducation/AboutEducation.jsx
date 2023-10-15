@@ -1,4 +1,4 @@
-import "./abouteducation.css"
+import "./AboutEducation.css"
 import { useEffect, useState } from "react"
 
 import Reveal from "../../components/Reveal/Reveal"

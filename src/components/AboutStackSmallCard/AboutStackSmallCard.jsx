@@ -1,4 +1,4 @@
-import "./aboutstacksmallcard.css"
+import "./AboutStackSmallCard.css"
 
 export default function AboutStackSmallCard({ name, icon }) {
 	return (

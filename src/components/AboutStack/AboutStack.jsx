@@ -1,4 +1,4 @@
-import "./aboutstack.css"
+import "./AboutStack.css"
 
 import Reveal from "../../components/Reveal/Reveal"
 import AboutStackCard from "../AboutStackCard/AboutStackCard"

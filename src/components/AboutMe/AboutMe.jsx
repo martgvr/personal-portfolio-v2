@@ -1,4 +1,4 @@
-import './aboutme.css'
+import './AboutMe.css'
 import Reveal from "../../components/Reveal/Reveal"
 import Button from "../../components/Button/Button"
 

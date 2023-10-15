@@ -1,4 +1,4 @@
-import './maintext.css'
+import './MainText.css'
 import { useEffect, useState } from "react"
 import { glitchTrigger } from "./glitchtrigger.js"
 import { useMotionValueEvent, useScroll } from "framer-motion"
