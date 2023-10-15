@@ -50,3 +50,19 @@
     align-self: center;
     justify-content: center;
 }
+
+@media (max-width: 1000px) {
+    .projects__content {
+        padding: 100px 50px;
+    }    
+
+    .projects__content h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .projects__navbar {
+        gap: 50px;
+        padding: 12px 20px;
+    }
+}

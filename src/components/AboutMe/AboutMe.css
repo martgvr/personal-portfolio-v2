@@ -19,6 +19,10 @@
 }
 
 @media (max-width: 1000px) {
+    .aboutme__container {
+        margin-bottom: 50px;
+    }
+
     .aboutme__container h1 {
         font-size: 3em;
     }

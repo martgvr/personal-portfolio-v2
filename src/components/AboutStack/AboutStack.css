@@ -33,20 +33,28 @@
 }
 
 @media (max-width: 1000px) {
-    .aboutstack__container h1 {
-        font-size: 2em;
-        text-align: center;
-    }
-
-    .aboutstack__lower--cards {
-        gap: 10px;
-        flex-wrap: wrap;
-        padding: 30px 50px;
-    }
-
     .stackcards__container {
         gap: 10px;
         height: 100%;
         flex-direction: column;
     }    
+    
+    .aboutstack__container h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .aboutstack__technologies > div {
+        padding: 30px 20px;
+    }
+    
+    .aboutstack__lower {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .aboutstack__lower--cards {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
 }
